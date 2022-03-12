@@ -19,6 +19,9 @@ const http = require("http").createServer(app);
 // !Routes
 app.use("/api", require("./routes/authRouter"));
 app.use("/api", require("./routes/userRouter"));
+app.use("/api", require("./routes/matchRouter"));
+app.use("/api", require("./routes/teamRouter"));
+
 
 const URI = process.env.MONGO_URI;
 mongoose.connect(

@@ -33,6 +33,7 @@ const userCtrl = {
     },
 
     updateUser: async (req, res) => {
+        const {fullname} = req.body;
         try {
             if (!fullname) {
                 return res.status(400).json({ msg: "Please add your full name." });
